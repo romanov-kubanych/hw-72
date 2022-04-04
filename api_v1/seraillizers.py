@@ -7,4 +7,5 @@ class QuoteSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Quote
-        exclude = []
+        fields = ('id', 'text', 'email', 'name', 'rating', 'status')
+        read_only_fields = ('rating', 'status')
